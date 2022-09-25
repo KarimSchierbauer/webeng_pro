@@ -4,7 +4,6 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const ESLintPlugin = require('eslint-webpack-plugin');
-const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 
 module.exports = {
   mode: 'development',
@@ -36,7 +35,6 @@ module.exports = {
     new CleanWebpackPlugin(),
     // eslint-disable-next-line no-undef
     new ESLintPlugin(),
-    new FaviconsWebpackPlugin('./src/assets/favicon.ico'),
     new HtmlWebpackPlugin({
       title: 'Basic Webpack Setup',
       template: path.resolve(__dirname, './src/index.html'),
