@@ -1,8 +1,10 @@
 /* eslint-disable import/no-extraneous-dependencies */
+
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const ESLintPlugin = require('eslint-webpack-plugin');
+const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 
 module.exports = {
   mode: 'development',
@@ -10,7 +12,11 @@ module.exports = {
   // Use the src/index.js file as entry point to bundle it.
   // If the src/index.js file imports other JS files,
   // bundle them as well
-  entry: path.resolve(__dirname, './src/index.js'),
+  entry: [
+    path.resolve(__dirname, './src/index.ts'),
+    path.resolve(__dirname, './src/scripts/catfact.ts'),
+    path.resolve(__dirname, './src/scripts/contact.ts'),
+  ],
   // 2
   // The bundles source code files shall result in a bundle.js file
   // in the /dist folder
@@ -30,9 +36,20 @@ module.exports = {
     new CleanWebpackPlugin(),
     // eslint-disable-next-line no-undef
     new ESLintPlugin(),
+    new FaviconsWebpackPlugin('./src/assets/favicon.ico'),
     new HtmlWebpackPlugin({
       title: 'Basic Webpack Setup',
       template: path.resolve(__dirname, './src/index.html'),
+    }),
+    new HtmlWebpackPlugin({
+      title: 'Cat facts',
+      filename: 'pages/catfact.html',
+      template: path.resolve(__dirname, './src/pages/catfact.html'),
+    }),
+    new HtmlWebpackPlugin({
+      title: 'Contact',
+      filename: 'pages/contact.html',
+      template: path.resolve(__dirname, './src/pages/contact.html'),
     }),
   ],
   // 5

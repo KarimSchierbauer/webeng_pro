@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title><%= htmlWebpackPlugin.options.title %></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <body>
+    <div class="content">
+      <div class="row center">
+        <button class="btn btn-dark btn-lg"><a href="../index.html">Home</a></button>
+        <button class="btn btn-dark btn-lg"><a href="./catfact.html">Cat facts</a></button>
+        <button class="btn btn-dark btn-lg"><a href="./contact.html">Contact</a></button>
+    </div>
+    <div class="row center">
+      <div class="container-main center">
+        <h1><%= htmlWebpackPlugin.options.title %></h1>
+        <form id="contact-form">
+            <label for="fname">First name:</label><br>
+            <input type="text" id="firstname" name="firstname" value="Max"><br>
+            <label for="lname">Last name:</label><br>
+            <input type="text" id="lastname" name="lastname" value="Mustermann"><br><br>
+            <label for="lname">E-Mail:</label><br>
+            <input type="text" id="email" name="email" value="max.mustermann@testmail.com"><br><br>
+            <input type="submit" value="submit">
+        </form>
+        <div id="contactResponseBox"></div>  
+      </div>
+    </div>
+    </div>
+  </body>
+</html>

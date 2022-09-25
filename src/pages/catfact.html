@@ -10,13 +10,18 @@
   <body>
     <div class="content">
       <div class="row center">
-        <button class="btn btn-dark btn-lg"><a href="./index.html">Home</a></button>
-        <button class="btn btn-dark btn-lg"><a href="./pages/catfact.html">Cat facts</a></button>
-        <button class="btn btn-dark btn-lg"><a href="./pages/contact.html">Contact</a></button>
+        <button class="btn btn-dark btn-lg"><a href="../index.html">Home</a></button>
+        <button class="btn btn-dark btn-lg"><a href="./catfact.html">Cat facts</a></button>
+        <button class="btn btn-dark btn-lg"><a href="./contact.html">Contact</a></button>
     </div>
     <div class="row center">
       <div class="container-main center">
         <h1><%= htmlWebpackPlugin.options.title %></h1>
+        <form id="cat-form">
+            <div class="row">
+                <button type="submit" value="submit" class="btn btn-dark">Get a cat fact</button>
+            </div>
+        </form>    
       </div>
     </div>
     </div>

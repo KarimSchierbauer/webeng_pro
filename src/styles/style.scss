@@ -1,5 +1,41 @@
-$body-color: red;
-
 body {
-  color: $body-color;
+  width: 100%;
+  overflow-x: clip;
+}
+
+p {
+  max-width: 100%;
+  margin: 5% !important;
+  border: 1px solid gray;
+}
+
+.content {
+  max-width: 100%;
+  margin-top: 1%;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+.row {
+  width: 100%;
+  margin: 0 auto !important;
+}
+
+.container-main{
+  height: 90vh;
+  padding: 2em;
+}
+
+.btn {
+  width: 33%;
+  margin: 0 auto !important;
+}
+
+.a{
+  color: white !important;
+}
+
+.center {
+  margin: 0 auto !important;
+  padding: 10px;
 }
